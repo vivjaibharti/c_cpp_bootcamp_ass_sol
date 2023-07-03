@@ -1,11 +1,14 @@
-//Topic:5. Write a function to sort employees according to their salaries [ refer structure from question 1.
+ //Topic:5. Write a function to sort employees according to their salaries [ refer structure from question 1.
 #include <stdio.h>
 
-struct emp{
+struct emp
+{
     int id;
     char name[50];
     float salary;
 };
+
+// function to sort employee according to salary
 void sort(struct emp *ptr,int n)
 {
     struct emp *sorted[n];
