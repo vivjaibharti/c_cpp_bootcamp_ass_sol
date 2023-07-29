@@ -11,6 +11,9 @@ int main()
  for(i=0;i<10;i++)
  {
     cin>>arr[i];
+ }
+ for(i=0;i<10;i++)
+ {
     sum=sum+arr[i];
  }
  cout<<"Sum all the numbers of an array="<<sum;

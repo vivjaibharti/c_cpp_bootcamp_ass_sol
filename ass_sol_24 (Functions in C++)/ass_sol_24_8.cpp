@@ -1,30 +1,36 @@
 //Topic:8. Define overloaded functions to calculate area of circle, area of rectangle and area of triangle.
 #include <iostream>
 using namespace std;
-int cal_area(float);
-int cal_area(int,int);
-float cal_area(int,float);
+
+void cal_area(int);
+void cal_area(int,int);
+void cal_area(double,double);
+
 int main()
 {
-
- cout<<"Area of circle:"<<cal_area(5.0); 
- cout<<"Area of rectangle:"<<cal_area(10,20);
- cout<<"Area of triangle:"<<cal_area(10,5.2);
- 
+    // double x;
+    // float y;
+    // int z;
+    // char c='1';
+ cal_area(5); 
+ cal_area(10,20);
+ cal_area(10.23,5.156);
+ //cout<<sizeof(c)<<endl;
+ //cout<<c;
  return 0;
 }
 
-int cal_area(float r)
+void cal_area(int r)
 {
-    return (3.14*r*r);
+    cout<<"The area of circle having radius="<<r<<" is: "<<3.14*r*r<<endl;;
 }
 
-int cal_area(int length,int breadth)
+void cal_area(int length,int breadth)
 {
-    return (length*breadth);
+    cout<<"The area of rectangle having length="<<length<<" and breadth="<<breadth<<" is: "<<length*breadth<<endl;
 }
 
-float cal_area(int base,float height)
+void cal_area(double base,double height)
 {
-    return (0.5*base*height);
+    cout<<"The area of triangle having base="<<base<<" and height="<<height<<" is: "<<0.5*base*height<<endl;
 }

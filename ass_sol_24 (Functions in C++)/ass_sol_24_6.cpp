@@ -2,26 +2,22 @@
 #include <iostream>
 using namespace std;
 
-class 
-{
- 
-};
-void swap(int ,int);
+void swap(int &,int &);
 
 int main()
 {
     int a,b;
     cout<<"Enter value of a and b:"<<endl;
-    cin>>a,b;
-    swap(&a,&b);
- 
+    cin>>a>>b;
+    swap(a,b);
+    cout<<"Values after swapping a="<<a<<" and b="<<b<<endl;
  
  return 0;
 }
 
-void swap(int a, int b)
+void swap(int &x,int &y)
 {
-    a=a+b;
-    b=a-b;
-    a=a-b;
+    x=x+y;
+    y=x-y;
+    x=x-y;
 }

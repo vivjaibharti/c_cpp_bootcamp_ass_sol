@@ -1,5 +1,4 @@
-/*Topic:8. Write a program to check whether the given number is even or odd using a bitwise 
-operator.*/
+/*Topic:8. Write a program to check whether the given number is even or odd using a bitwise operator.*/
 #include <stdio.h>
 
 int main()
@@ -19,15 +18,15 @@ int main()
  }
  printf("\nSize of x is %u bytes.",sizeof(x));
 */
- 
+//Method-2
  int x,result;
  printf("Enter a positive integer:");
  scanf("%u",&x);
  result=x&1;
  if(result==1)
-    printf("x is odd");
-else
-    printf("x is even");
+    printf("%d is odd\n",x);
+ else
+    printf("%d x is even\n",x);
 
  return 0;
 

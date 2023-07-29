@@ -6,8 +6,7 @@ using namespace std;
 int main()
 {
 
- std::cout<<"Hello"<<endl;
- cout<<"World";
- 
+ cout<<"Hello"<<endl<<"World";
  return 0;
+ 
 }

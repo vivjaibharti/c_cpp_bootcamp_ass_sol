@@ -16,7 +16,11 @@ class Complex
  }
  void print()
  {
-    cout<<real<<"+"<<img;
+    cout<<real<<"+"<<img<<"i"<<endl;
+ }
+ void print(Complex c)
+ {
+   cout<<c.real<<"+"<<c.img<<"i"<<endl;
  }
 };
   
@@ -24,6 +28,8 @@ int main()
 {
  Complex c1,c2;
  c1.setValue(12,12.5);
+ c2.setValue(13,13.5);
  c1.print();
+ c1.print(c2);
  return 0;
 }
