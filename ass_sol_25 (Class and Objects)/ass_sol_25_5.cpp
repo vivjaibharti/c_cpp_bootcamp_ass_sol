@@ -9,7 +9,7 @@ class ReverseNumber
  int reverse;
 
  public:
- //Parameterized Constructor to set the value of the input number of which reverse is required.
+ //Parameterized Constructor to set the value of the input number whose reverse is required.
  ReverseNumber()
  {
     cout<<"Enter the input Number:";

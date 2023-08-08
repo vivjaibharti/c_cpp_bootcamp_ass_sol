@@ -1,5 +1,4 @@
-//Topic:6. Define a class Square to find the square of a number and write a C++ program to
-//Count number of times a function is called.
+//Topic:6. Define a class Square to find the square of a number and write a C++ program to Count number of times a function is called.
 
 #include <iostream>
 using namespace std;
@@ -32,17 +31,12 @@ class Square
  static void getCount()
  {
    count++;
-   cout<<"\nNumber of times any fuunction has been called:"<<count;
+   cout<<"Number of times any fuunction has been called:"<<count<<endl;
  };
 
 };
 
 int Square::count=0;
-void Square::getCount()
-{  
-   count++;
-   cout<<"\nNumber of times any fuunction has been called:"<<count;
-}
 
 int main()
 {
@@ -54,6 +48,7 @@ int main()
  s2.setData();
  s2.cal_square();
  s2.getData();
- Square getCount();
+ s1.getCount();
+ s2.getCount();
  return 0;
 }

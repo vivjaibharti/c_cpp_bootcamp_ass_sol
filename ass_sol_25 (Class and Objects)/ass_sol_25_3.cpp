@@ -5,9 +5,10 @@ using namespace std;
 class Factorial
 {
     private:
-    unsigned int x,y=1;
+    int x,y=1;
 
     public:
+    //parameterised constructor used to intialize the instance member variable instead of setter function.
     Factorial(int z)
     {
         x=z;
@@ -15,7 +16,7 @@ class Factorial
 
     void cal_Factorial()
     {
-        if(x==0 || x==1)
+        if(x<=0 || x==1)
         {
             
         }
@@ -27,7 +28,6 @@ class Factorial
             }
         }
         cout<<"Factorial of "<<x<<"="<<y<<endl;
- 
     }
 };
 
