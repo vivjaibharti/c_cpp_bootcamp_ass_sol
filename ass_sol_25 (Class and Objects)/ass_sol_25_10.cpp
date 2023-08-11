@@ -20,10 +20,7 @@ class Area
     //     cout<<"Enter the length of rectanle:";
     //     cin>>breadth_rectanle;
     // }
-    void showData()
-    {
-
-    }
+    
     void square(int x)
     {
         side_square=x;
@@ -43,7 +40,7 @@ class Area
     {
         radius=x;
         area_circle=3.14*radius*radius;
-        cout<<"Area of circle:"<<area_square<<endl;
+        cout<<"Area of circle:"<<area_circle<<endl;
     }
 };
 

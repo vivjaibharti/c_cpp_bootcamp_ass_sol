@@ -17,10 +17,12 @@ class Rectangle
     cout<<"Enter the breadth of rectangle:";
     cin>>breadth;
  }
+ 
  void cal_area()
  {
     area=length*breadth;
  }
+
  void print_area()
  {
     cout<<"Area of rectangle="<<area;

@@ -9,10 +9,19 @@ class ReverseNumber
  int reverse;
 
  public:
- //Parameterized Constructor to set the value of the input number whose reverse is required.
+ /*Parameterized Constructor to set the value of the input number whose reverse is required.
  ReverseNumber()
  {
     cout<<"Enter the input Number:";
+    cin>>x;
+    if(x<0) //This statement is to convert the given input in positive integer. 
+    {   x=x+(-2*x);
+        flag++;
+    }
+ }*/
+ void set_value()
+ {
+    cout<<"Enter value of x:";
     cin>>x;
     if(x<0) //This statement is to convert the given input in positive integer. 
     {   x=x+(-2*x);
@@ -45,8 +54,10 @@ int main()
 {
 
  ReverseNumber r1;
+ r1.set_value();
  r1.do_reverse();
  ReverseNumber r2;
+ r2.set_value();
  r2.do_reverse();
  
  return 0;

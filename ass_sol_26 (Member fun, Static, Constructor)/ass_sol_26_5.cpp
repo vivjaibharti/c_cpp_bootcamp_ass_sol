@@ -1,4 +1,4 @@
-//Topic:5. Define a class Date and write a program to Display Dateand initialise date object using Constructors.
+//Topic:5. Define a class Date and write a program to Display Date and initialise date object using Constructors.
 #include <iostream>
 using namespace std;
 

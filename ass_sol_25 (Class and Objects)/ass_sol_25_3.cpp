@@ -5,41 +5,47 @@ using namespace std;
 class Factorial
 {
     private:
-    int x,y=1;
+    int x,fact=1;
 
     public:
-    //parameterised constructor used to intialize the instance member variable instead of setter function.
+    /*parameterised constructor used to intialize the instance member variable instead of setter function.
     Factorial(int z)
     {
         x=z;
-    }
+    }*/
 
-    void cal_Factorial()
+    void set_data()
+    {
+        cout<<"Enter a number to calculate its factorial:";
+        cin>>x;
+    }
+    int cal_Factorial()
     {
         if(x<=0 || x==1)
         {
-            
+            return fact;
         }
         else
         {
             for(int i=1;i<=x;i++)
             {
-                y=y*i;
+                fact=fact*i;
             }
         }
-        cout<<"Factorial of "<<x<<"="<<y<<endl;
+        return fact;
+    }
+    void get_data()
+    {
+        cout<<"Factorial of "<<x<<" is "<<fact<<endl;
     }
 };
-
 
 int main()
 {
 
-    Factorial f1(5),f2(2),f3(1),f4(33);
+    Factorial f1;
+    f1.set_data();
     f1.cal_Factorial(); 
-    f2.cal_Factorial();
-    f3.cal_Factorial();
-    f4.cal_Factorial();
- 
- return 0;
+    f1.get_data();
+    return 0;
 }

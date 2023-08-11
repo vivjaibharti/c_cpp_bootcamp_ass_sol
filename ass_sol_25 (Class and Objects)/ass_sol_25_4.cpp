@@ -4,9 +4,14 @@ using namespace std;
 
 class LargestNumber
 {
-    int largest;
+    int x,y,z,largest;
  public:
-    void find_Largest(int x,int y, int z)
+    void set_data()
+    {
+        cout<<"Enter value of x,y,z respectively:";
+        cin>>x>>y>>z;
+    }
+    void find_Largest()
     {
         if(x>y)
         {
@@ -30,7 +35,7 @@ class LargestNumber
                 largest=z;
             }
         }
-        cout<<"Largest number among "<<x<<","<<y<<","<<z<<"="<<largest<<endl;
+        cout<<"Largest number among "<<x<<","<<y<<", and "<<z<<"="<<largest<<endl;
     }
 };
 
@@ -39,8 +44,10 @@ int main()
 {
 
  LargestNumber l1,l2;
- l1.find_Largest(10,20,-9);
- l2.find_Largest(20,-2568,-7);
+ l1.set_data();
+ l1.find_Largest();
+ l2.set_data();
+ l2.find_Largest();
  
  return 0;
 }

@@ -5,35 +5,37 @@ using namespace std;
 
 class Student
 {
-    char rollno[8],name[50],progName[100],progCode[5],email[50],address[150];
-    int mob;
+    char rollno[9],name[50],progName[100],progCode[5],email[50],address[150];
+    char mob[11];
     public:
     Student()
     {
-        cout<<"Enter Student Name: ";
         // fflush(stdin);
         // fgets(name,8,stdin);
-        // cin.ignore();
-        cin.getline(name,50);
-        cout<<"Enter Student Rollno: ";
+        cin.ignore();// Ignore newline character left in buffer
+
+        cout<<"Enter Student Name: ";
+        cin.getline(name,sizeof(name));// Use sizeof() to specify buffer size.
+
         // fflush(stdin);
         // fgets(rollno,50,stdin);
-        // cin.ignore();
-        cin.getline(rollno,50);
-        cout<<"Enter the Programme Name: ";
+        cout<<"Enter Student Rollno: ";
+        cin.getline(rollno,sizeof(rollno));
+
         // fgets(progName,100,stdin);
-        // cin.ignore();
-        cin.getline(progName,100);
+        cout<<"Enter the Programme Name: ";
+        cin.getline(progName,sizeof(progName));
+
+         // fgets(progCode,5,stdin);
         cout<<"Enter the Programme Code: ";
-        // fgets(progCode,5,stdin);
-        // cin.ignore();
-        cin.getline(progCode,5);
-        cout<<"Enter Your Email Id: ";
+        cin.getline(progCode,sizeof(progCode));
+
         // fgets(email,50,stdin);
-        // cin.ignore();
-        cin.getline(email,50);
+        cout<<"Enter Your Email Id: ";
+        cin.getline(email,sizeof(email));
+
         cout<<"Enter Contact Number: ";
-        cin>>mob;
+        cin.getline(mob,sizeof(mob));
 
     }
     void display()
