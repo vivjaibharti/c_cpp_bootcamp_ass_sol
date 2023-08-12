@@ -64,8 +64,10 @@ int main()
 
  --u1;
  u1.getData();
+ 
  u2--;
  u2.getData();
+ 
  u3=u3--;
  u3.getData();
 

@@ -24,10 +24,12 @@ class Complex
  {
     cout<<real<<"+"<<img<<"i"<<endl;
  }
- friend Complex f1(Complex C,Complex D);
+ friend Complex operator+(Complex,Complex);
+ friend Complex operator+(Complex,int);
+ friend Complex operator+(int,Complex);
 
     // Explicit Copy constructor
-     Complex (const Complex &e)
+     Complex (const Complex &e)//without const keyword it throws error...
      {
         cout<<"Explicit Copy Constructor Called."<<endl;
         real=e.real;
@@ -36,18 +38,36 @@ class Complex
      }
 };
 
-Complex f1(Complex C,Complex D)
+Complex operator+(Complex C,Complex D)
 {
-    cout<<"Inside friend function."<<endl;
+    cout<<"Inside friend function-1."<<endl;
     Complex temp(0,0);
     temp.real=C.real+D.real;
     temp.img=C.img+D.img;
     return temp;
 }
+
+Complex operator+(Complex C,int x)
+{
+    cout<<"Inside friend function-2."<<endl;
+    Complex temp(0,0);
+    temp.real=C.real+x;
+    temp.img=C.img;
+    return temp;
+}
+
+Complex operator+(int x,Complex C)
+{
+    cout<<"Inside friend function-3."<<endl;
+    Complex temp(0,0);
+    temp.real=C.real+x;
+    temp.img=C.img;
+    return temp;
+}
 int main()
 {
  Complex c1,c2;
- Complex c3=f1(c1,c2);//Complex c3(f1(c1,c2));
+ Complex c3=5+c1;
  c3.getData();
  return 0;
 }
