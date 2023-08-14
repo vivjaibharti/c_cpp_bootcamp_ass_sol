@@ -18,8 +18,7 @@ class Time
     public:
         void operator>>(Time)
         {
-            cout<<"Enter Time\n-------------"<<endl;
-
+            
         }
 };
 
@@ -27,7 +26,7 @@ class Time
 int main()
 {
     
-    
-    
+    Time t1,t2;
+    t1>>;
     return 0;
 }
