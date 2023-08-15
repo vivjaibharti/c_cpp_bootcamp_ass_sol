@@ -3,33 +3,43 @@
 int print_prime(int);
 int print_prime(int x)
 {
-    if(x==1 || (x!=2) && (x&1==0))
-        {}
-    else if(x&1==1)
+    if(x==1 || (x!=2 && x%2==0))
+        {
+            return 0;
+        }
+    else if((x&1)==1)
         {
             for(int i=2;i<x;i++)
             {
                 if(x%i==0)
                 {
-                    printf("%d is a non-prime number.\n",x);
-                    return;
+                    return 0;
                 }
             }
-           printf("%d is a prime number.\n",x);
+           return x;
         }
     else
     {
-        printf("%d is a prime no.\n",x);
+        return 2;
     }
 }
 int main()
 {
- int n;
+ int n,count=0;
  printf("Enter value of n:");
  scanf("%d",&n);
- for(int i=1;i<=n;i++)
+ for(int i=1;;i++)
  {
-    printf("%d ",print_prime(i));
+        int x=print_prime(i);
+        if(x!=0)
+        {
+            printf("%d ",x);
+            count++;
+        }
+        if(count==n)
+        {
+            break;
+        }
  }
  return 0;
 }
