@@ -1,13 +1,10 @@
-//Topic:3. Write a function to check whether a given number is Prime or not. (TSRS) 
+//Topic:5. Write a function to print first N prime numbers (TSRN).
 #include <stdio.h>
-void check_prime(int);
-void check_prime(int x)
+int print_prime(int);
+int print_prime(int x)
 {
     if(x==1 || (x!=2) && (x&1==0))
-        {
-            printf("%d is a non-prime no.\n",x);
-            return;
-        }
+        {}
     else if(x&1==1)
         {
             for(int i=2;i<x;i++)
@@ -25,15 +22,14 @@ void check_prime(int x)
         printf("%d is a prime no.\n",x);
     }
 }
-
- 
 int main()
 {
-
  int n;
  printf("Enter value of n:");
  scanf("%d",&n);
- check_prime(n);
+ for(int i=1;i<=n;i++)
+ {
+    printf("%d ",print_prime(i));
+ }
  return 0;
-
 }
