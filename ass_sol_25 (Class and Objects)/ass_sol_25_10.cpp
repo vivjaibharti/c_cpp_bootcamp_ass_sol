@@ -6,20 +6,9 @@ using namespace std;
 class Area
 {
     private:
-    int length_rectangle,breadth_rectanle,side_square,radius,area_rectangle,area_square;float area_circle;
+    int length_rectangle,breadth_rectanle,side_square,radius,area_rectangle,area_square;
+    float area_circle;
     public:
-    // void setData()
-    // {
-    //     cout<<"Enter the dimensions:"<<endl;
-    //     cout<<"Enter the radius of circle:";
-    //     cin>>radius;
-    //     cout<<"Enter the side of square:";
-    //     cin>>side_square;
-    //     cout<<"Enter the length of rectanle:";
-    //     cin>>length_rectangle;
-    //     cout<<"Enter the length of rectanle:";
-    //     cin>>breadth_rectanle;
-    // }
     
     void square(int x)
     {

@@ -23,10 +23,10 @@ class Unary
         return temp;
     }
 
-    Unary operator++(int)//post increment
+    Unary operator++(int x)//post increment
     {
         Unary temp;
-        temp.u=++u;
+        temp.u=u++;
         return temp;
     }
 
@@ -37,10 +37,10 @@ class Unary
         return temp;
     }
 
-    Unary operator--(int)//post decrement
+    Unary operator--(int  x)//post decrement
     {
         Unary temp;
-        temp.u=--u;
+        temp.u=u--;
         return temp;
     }
 };
@@ -50,14 +50,15 @@ int main()
 
  Unary u1,u2,u3;
  u1.setData();
+
  u1.operator++();
  ++u1;
  u1.getData();
 
  u2.setData();
  u2++;
- u2.operator++(5);
- u2.getData();
+ u2.operator++();
+ u2.getData(); 
 
  u3=u2;
  u3.getData();

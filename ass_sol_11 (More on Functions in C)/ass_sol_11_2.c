@@ -2,6 +2,7 @@
 #include <stdio.h>
 //#include <limits.h>
 int cal_hcf(int,int);
+
 int main()
 {
  int a,b;

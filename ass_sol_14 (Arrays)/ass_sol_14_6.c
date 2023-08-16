@@ -4,14 +4,15 @@
 int main()
 {
  int a[10];
- printf("Enter 10 numbers");
+ printf("Enter 10 numbers:");
 
  for(int i=0;i<10;i++)
  {
     scanf("%d",&a[i]);
  }
-
- for(int i=10-1;i>=0;i++)
+ 
+ //Here in this algo we are shifting the greatest number first to the right most side...
+ for(int i=10-1;i>=0;i--)
  {
     for(int j=0;j<i;j++)
     {
@@ -20,7 +21,6 @@ int main()
             int temp=a[j];
             a[j]=a[j+1];
             a[j+1]=temp;
-
         }
     }
  }
