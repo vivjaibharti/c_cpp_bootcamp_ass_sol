@@ -26,11 +26,16 @@ class Mystring
             strcpy(str,s);
         }
 
-        Mystring operator !()
+        Mystring  operator !()
         {
-            Mystring temp;
-            strcpy(temp.str,strupr(str));
-            return temp;
+            //Mystring temp;
+            // strcpy(temp.str,str);
+            // for(int i=0;i<strlen(temp.str);i++)
+            // {
+               
+            // }
+            strrev(str);
+            return *this;
         }
 
         void getData()
@@ -44,7 +49,7 @@ int main()
 {
     
     Mystring m1("Vivek Jaiswal");
-    !m1;
-    m1.getData();
+    (!m1).getData();
+    (!m1).getData();
     return 0;
 }
