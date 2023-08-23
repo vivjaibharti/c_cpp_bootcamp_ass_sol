@@ -18,14 +18,14 @@ class Bill
   public:
   void get()
   {
-    cout<<"Enter Customer id:";
-    cin.getline(customer_id,sizeof(customer_id));
+    // cout<<"Enter Customer id:";
+    // cin.getline(customer_id,sizeof(customer_id));
 
-    cout<<"Enter Customer's Address:";
-    cin.getline(customer_address,sizeof(customer_address));
+    // cout<<"Enter Customer's Address:";
+    // cin.getline(customer_address,sizeof(customer_address));
 
-    cout<<"Enter Meter No.:";
-    cin.getline(meter_no,sizeof(meter_no));
+    // cout<<"Enter Meter No.:";
+    // cin.getline(meter_no,sizeof(meter_no));
 
     cout<<"Enter Unit Consumed:";
     cin>>unit_consumed;
@@ -40,11 +40,11 @@ class Bill
     }
     else if(unit_consumed>=100 && unit_consumed<=200)
     {
-        return billAmount=unit_consumed*rate_from_100_200;
+        return billAmount=100*rate_upto_100+(unit_consumed-100)*rate_from_100_200;
     }
     else
     {
-        return billAmount=unit_consumed*rate_above_200;
+        return billAmount=100*rate_upto_100+100*rate_from_100_200+(unit_consumed-200)*rate_above_200;
     }
   }
 };

@@ -40,7 +40,7 @@ class Complex
         temp.img=img-C.img;
         return temp;
     }
-    Complex operator*(Complex C)
+    Complex operator*(Complex &C)
     {
         Complex temp;
         temp.real=real*C.real;
@@ -48,10 +48,16 @@ class Complex
         return temp;
     }
     
-    void operator==(Complex C)
+    bool operator==(Complex C)
     {
-        real=C.real;
-        img=C.img;
+        if(real==C.real && img==C.img)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 };
 
@@ -63,9 +69,9 @@ int main()
  c2.setData();
  c3=c1+c2;
  c3.getData();
- c4==c3;
+ cout<<(c4==c3)<<endl;
  c4.getData();
- c4=c3*c4;
+ c4=c1*c2;
  c4.getData();
  return 0;
 }

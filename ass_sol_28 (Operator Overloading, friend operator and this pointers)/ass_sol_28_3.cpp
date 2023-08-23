@@ -74,9 +74,9 @@ int main()
     a1.setData(10,10);
     a1.display(10);
     cout<<a1[10]<<endl;
-    Array a3=a1;
-    a3.display(10);
-    // Array a3(10);
-    // a3.display(10);
+
+    // Array a3=a1;//error
+    // a3.display(10);//error
+
     return 0;
 }

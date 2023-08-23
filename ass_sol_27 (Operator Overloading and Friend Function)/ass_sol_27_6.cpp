@@ -35,7 +35,7 @@ class CString
             return temp;
         }
 
-        bool operator ==(CString c)
+        bool operator ==(CString &c)
         {
             cout<<"Operator== Called."<<endl;
             if(strcmp(f_name,c.f_name)==0)
@@ -57,10 +57,14 @@ int main()
     c2.getdata();
     c1=c3+c2;//c1=c3.operator+(c2);
     c1.getdata();
-    CString c4("Hello"),c5("Hello");
+    CString c4("Hello"),c5("Hiiii");
     if(c4==c5)
     {
         cout<<"Both are same."<<endl;
+    }
+    else
+    {
+        cout<<"Both are not same."<<endl;
     }
     return 0;
 }

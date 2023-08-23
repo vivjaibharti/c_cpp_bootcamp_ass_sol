@@ -31,7 +31,7 @@ public:
         mins = Time.mins;
         seconds = Time.seconds;
     }
-    //'==' equal to operator overloading
+    //'==' equal to operator overloading without normalisation
     bool operator==(Time t)
     {
         if (hours == t.hours && mins == t.mins && seconds == t.seconds)

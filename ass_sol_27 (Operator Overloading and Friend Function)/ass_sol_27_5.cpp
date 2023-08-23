@@ -38,12 +38,6 @@ class Numbers
             temp.z=-z;
             return temp;
         }
-        void operator-(int useless)
-        {
-            x=-x;
-            y=-y;
-            z=-z;
-        }
         void setData()
         {
             cout<<"Enter Value of x,y,z:";
