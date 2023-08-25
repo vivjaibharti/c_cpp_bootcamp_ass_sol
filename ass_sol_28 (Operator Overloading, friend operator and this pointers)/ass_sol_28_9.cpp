@@ -31,17 +31,18 @@ class Integer
             cout<<"Value of integer:"<<x<<endl;
         }
 
-        operatorint() (Integer &i)
+        operator int()
         {
-
+            return x;
         }
 };
 
 
 int main()
 {
-    
-    
-    
+    Integer i1(10);
+    int x;
+    x=i1;
+    cout<<x<<endl;
     return 0;
 }
