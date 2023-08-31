@@ -37,6 +37,11 @@ class Complex
 
         Complex& operator= (Complex &c)//Assignment Operator Overloading.
         {
+            if(real==c.real && img==c.img)
+            {
+                cout<<"if-else of assignment operator called."<<endl;
+                return *this;
+            }
             real=c.real;
             img=c.img;
             return *this;
@@ -50,6 +55,7 @@ int main()
     Complex c1,c2,c3;
     c1.setData(10,10);
     c3=c2=c1;
+    c1=c2;
     c1.display();
     c2.display();
     c3.display();

@@ -32,7 +32,7 @@ class Array
 
         void setData(int n,int index)
         {
-             if(index>size)
+             if(index>=size)
              {
                 cout<<"Array Index out of bound size."<<endl;
                 return;
@@ -42,7 +42,7 @@ class Array
 
         void display(int index)
         {
-            if(index>size)
+            if(index>=size)
              {
                 cout<<"Array Index out of bound size."<<endl;
                 return;
@@ -52,10 +52,10 @@ class Array
 
         int operator[](int index)
         {
-            if(index>size)
+            if(index>=size)
              {
                 cout<<"Array Index out of bound size."<<endl;
-                exit(0);
+                return 0;
              }
              return a[index];
         }

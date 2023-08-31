@@ -56,6 +56,7 @@ int main()
     c2.setData(1,1,1);
     c2.display();
     c4=(c1,c2,c3);
+    c2.display();
     c4.display();
     return 0;
 }
