@@ -7,6 +7,7 @@ int main()
  int n,factorial=1;
  printf("Enter value of n:");
  scanf("%d",&n);
+ 
  if(n==0)
  {
     factorial=1;
