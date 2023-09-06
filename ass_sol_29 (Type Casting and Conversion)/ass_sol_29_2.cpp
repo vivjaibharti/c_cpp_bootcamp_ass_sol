@@ -41,7 +41,7 @@ int main()
     c1.setData(3,4);
     c1.display(); 
     int x; 
-    x=c1;//
+    x=c1;//Complex to int.
     cout<<"Value of x="<<x<<endl;
     return 0;
 }

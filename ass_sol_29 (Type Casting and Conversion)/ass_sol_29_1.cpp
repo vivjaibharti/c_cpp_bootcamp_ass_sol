@@ -15,7 +15,7 @@ class Complex
 {
     int real,img;
     public:
-        Complex()//Default Constructor
+        Complex()
         {
             real=0;
             img=0;

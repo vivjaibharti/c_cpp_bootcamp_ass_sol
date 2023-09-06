@@ -27,9 +27,19 @@ class Product
             y=b;
         }
 
-        int getData()
+        void display()
+        {
+            cout<<"Product:x="<<x<<" y="<<y<<endl;
+        }
+
+        int getX()
         {
             return x;
+        }
+
+        int getY()
+        {
+            return y;
         }
 
 };
@@ -46,15 +56,20 @@ class Item
 
         Item(Product p)
         {
-            m=p.getData();
-            n=p.getData();
+            cout<<"PC called for Product to item."<<endl;
+            m=p.getX();
+            n=p.getY();
         }
 
         void display()
         {
             cout<<"Item:m="<<m<<" n="<<n<<endl;
         }
-    
+
+        operator Product()
+        {
+
+        }
 };
 
 
@@ -63,7 +78,7 @@ int main()
     Item i1; 
     Product p1; 
     p1.setData(3,4); 
-    i1=(Item)p1;
+    i1=p1;
     i1.display();
     return 0;
 
