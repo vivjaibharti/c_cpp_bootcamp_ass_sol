@@ -23,13 +23,13 @@ class Person
             cout<<"Enter Age:";
             cin>>age;
         }
-        void getName()
+        string getName()
         {
-            cout<<"Name: "<<name;
+            return name;
         }
-        void getAge()
+        int getAge()
         {
-            cout<<"Age: "<<age;
+            return age;
         }
 };
 
@@ -49,20 +49,31 @@ class Employee:public Person
             cout<<"Enter Salary:";
             cin>>salary;
         }
-        void getEmpid()
+        int getEmpid()
         {
-            cout<<"Employee ID: "<<empid<<endl;
+            return empid;
         }
-        void getSalary()
+        float getSalary()
         {
-            cout<<"Employee Salary: "<<salary<<endl;
+            return salary;
+        }
+        void getAllDetails()
+        {
+            cout<<"#############################"<<endl;
+            cout<<"Employee ID: "<<empid<<endl;
+            cout<<"Employee Name: "<<getName()<<endl;
+            cout<<"Employpee Age: "<<getAge()<<endl;
+            cout<<"Employpee Salary: "<<getSalary()<<endl;
         }
 };
 
 int main()
 {
-    
-    
-    
+    Employee e1;
+    e1.setName();
+    e1.setAge();
+    e1.setEmpid();
+    e1.setSalary();
+    e1.getAllDetails();
     return 0;
 }
